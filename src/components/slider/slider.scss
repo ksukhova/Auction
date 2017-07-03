@@ -1,0 +1,12 @@
+@import "~slick-carousel/slick/slick.scss";
+@import "~slick-carousel/slick/slick-theme.scss";
+
+.slider {
+  max-width: 900px;
+  margin: 0 auto;
+  height: auto;
+
+  .slick-arrow:before {
+    color: #000;
+  }
+}

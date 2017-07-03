@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -13,11 +14,19 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
+                test: /\.js$/,
                 include: [
                     path.resolve(__dirname, "src")
                 ],
                 loader: "babel-loader"
+            },
+            {
+                test: /\.ejs$/,
+                use: [
+                    {
+                        loader: "ejs-loader"
+                    }
+                ]
             },
             {
                 test: /\.scss$/,
@@ -26,21 +35,37 @@ module.exports = {
                 }, {
                     loader: "css-loader" // translates CSS into CommonJS
                 }, {
-                    loader: "sass-loader" // compiles Sass to CSS
+                    loader: "resolve-url-loader"
+                }, {
+                    loader: "sass-loader?sourceMap" // compiles Sass to CSS
+                }]
+            },
+            {
+                test: /\.woff2?$|\.ttf$|\.eot$|\.svg$|\.gif$/,
+                use: [{
+                    loader: "file-loader"
                 }]
             }
         ]
     },
+    resolve: {
+        alias: {
+            src: path.resolve('./src')
+        }
+    },
     plugins: [
         new HtmlWebpackPlugin({
-            // template: '!!ejs-compiled-loader!/src/index.ejs',
-            template: '!!ejs-compiled-loader!' + path.join(__dirname, "src/index.ejs"),
+            template: '!!ejs-compiled-loader!index.ejs',
             inject: false
-        })
+        }),
+        new CopyWebpackPlugin([
+            { context: 'src/images', from: '**/*', to: 'images' },
+        ])
     ],
     devServer: {
         contentBase: path.join(__dirname, "build"),
         compress: true,
-        port: 9000
+        port: 9000,
+        historyApiFallback: true
     }
 };

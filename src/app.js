@@ -1,5 +1,17 @@
+import Header from './components/header/header.js';
+import Footer from './components/footer/footer.js';
+import Slider from './components/slider/slider.js';
+import About from './components/about/about.js';
+import Contacts from './components/contacts/contacts.js';
+import start from './start';
 import './app.scss';
 
-console.log(3);
+const components = {
+    Header,
+    Footer,
+    Slider,
+    About,
+    Contacts
+};
 
-var a = 5;
+start(components);
