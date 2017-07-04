@@ -1,0 +1,18 @@
+<div class="preview">
+    <div class="preview__wrapper">
+        <% if (data) {
+            for (var i = 0; i < data.length; i++) { %>
+                <button class="preview__link" data-link="/lots/<%= data[i].id %>">
+                    <div class="preview__item">
+                        <img class="preview__img" src="/images/lots/<%= data[i].img %>.jpg">
+                        <%= data[i].name %>
+                    </div>
+                </button>
+            <%}
+        }%>
+    </div>
+    <div class="preview__pagination"></div>
+    <% if (showAll) {%>
+        <button class="preview__show-all">Show All</button>
+    <%}%>
+</div>

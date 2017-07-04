@@ -3,7 +3,8 @@ import './header.scss';
 
 export default class Header {
     static selectors = {
-        button: '.button'
+        button: '.header__enter',
+        search: '.header__search'
     };
 
     constructor($root) {

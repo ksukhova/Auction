@@ -2,14 +2,16 @@ import $ from 'jquery';
 import 'slick-carousel';
 import './slider.scss';
 import router from 'src/router';
+import Base from 'src/components/base';
 import template from './_slider.ejs';
 
-export default class Slider {
+export default class Slider extends Base {
     static selectors = {
         slider: '.slider'
     };
 
     constructor($root) {
+        super();
 
         this.elements = {
             $root,
@@ -17,7 +19,7 @@ export default class Slider {
             $slider: $('')
         };
 
-        // this.init();
+        this.init();
         this.attachEvents();
     }
 
@@ -35,13 +37,17 @@ export default class Slider {
     }
 
     attachEvents() {
-        router
-            .on('/', this.render,
-                {
-                    before: done => done(),
-                    leave: this.destroy
-                });
+        this.elements.$window
+            .on('/', this.toggle);
     }
+
+    toggle = (event, { active }) => {
+        if (active) {
+            this.render();
+        } else {
+            this.destroy();
+        }
+    };
 
     render = () => {
         this.elements.$root.html(template());

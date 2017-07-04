@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Vincent van Gogh Portrait",
+    "description": "Self-Portrait, 1887, Art Institute of Chicago",
+    "price": 1500000,
+    "type": "picture",
+    "img": "lot1"
+  },
+  {
+    "id": 12,
+    "name": "Krugerrand",
+    "description": "Gold coin, 1975",
+    "price": 15000,
+    "type": "coin",
+    "img": "lot12"
+  },
+  {
+    "id": 2,
+    "name": "Sunflowers",
+    "description": "Repetition of the 4th version (yellow background), August 1889.[1] Van Gogh Museum, Amsterdam",
+    "price": 2000000,
+    "type": "picture",
+    "img": "lot2"
+  },
+  {
+    "id": 3,
+    "name": "The Man",
+    "description": "Pablo Picasso artwork",
+    "price": 50000,
+    "type": "picture",
+    "img": "lot3"
+  },
+  {
+    "id": 7,
+    "name": "The Death",
+    "description": "Death statue",
+    "price": 1000,
+    "type": "statue",
+    "img": "lot7"
+  },
+  {
+    "id": 4,
+    "name": "Campbell",
+    "description": "Andy Warhol artwork",
+    "price": 150000,
+    "type": "picture",
+    "img": "lot4"
+  },
+  {
+    "id": 5,
+    "name": "The Kiss",
+    "description": "The Kiss 1907–08, oil on canvas, Österreichische Galerie Belvedere, Vienna",
+    "price": 3000000,
+    "type": "picture",
+    "img": "lot5"
+  },
+  {
+    "id": 6,
+    "name": "The Tree",
+    "description": "Tree in Schloss Kammer Park",
+    "price": 65000,
+    "type": "picture",
+    "img": "lot6"
+  },
+  {
+    "id": 8,
+    "name": "Justice",
+    "description": "Blind statue of Justice",
+    "price": 6000,
+    "type": "statue",
+    "img": "lot8"
+  },
+  {
+    "id": 9,
+    "name": "Greece woman",
+    "description": "Typical greece woman",
+    "price": 500,
+    "type": "statue",
+    "img": "lot9"
+  },
+  {
+    "id": 10,
+    "name": "Atlanta Liberty coin",
+    "description": "Olympic games coin, 1996",
+    "price": 5000,
+    "type": "coin",
+    "img": "lot10"
+  },
+  {
+    "id": 11,
+    "name": "Gunston Hall",
+    "description": "FCPOA USS Gunston Hall (LSD-44)",
+    "price": "10",
+    "type": "coin",
+    "img": "lot11"
+  }
+]

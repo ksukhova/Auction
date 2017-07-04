@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Auction</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-<%- include src/components/header/header.ejs %>
-<div class="main">
-    <%- include src/components/slider/slider.ejs %>
-    <%- include src/components/about/about.ejs %>
-    <%- include src/components/contacts/contacts.ejs %>
+<div class="content">
+    <%- include src/components/header/header.ejs %>
+    <div class="main">
+        <%- include src/components/slider/slider.ejs %>
+        <%- include src/components/preview/preview.ejs %>
+        <%- include src/components/select/select.ejs %>
+        <%- include src/components/lots/lots.ejs %>
+        <%- include src/components/lot/lot.ejs %>
+        <%- include src/components/about/about.ejs %>
+        <%- include src/components/contacts/contacts.ejs %>
+    </div>
+    <%- include src/components/footer/footer.ejs %>
 </div>
-<%- include src/components/footer/footer.ejs %>
-
 <script src="app.js"></script>
 </body>
 </html>

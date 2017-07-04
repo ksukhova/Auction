@@ -1,29 +1,23 @@
 import $ from 'jquery';
-import router from 'src/router';
+import Base from 'src/components/base';
 import template from './_about.ejs';
+import './about.scss';
 
-export default class About {
+export default class About extends Base {
     constructor($root) {
+        super();
 
         this.elements = {
-            $root
+            $root,
+            $window: $(window)
         };
 
-        this.init();
         this.attachEvents();
     }
 
-    init() {
-
-    }
-
     attachEvents() {
-        router
-            .on('/about', this.render, {
-                before: done => done(),
-                leave: this.destroy
-            })
-            .resolve();
+        this.elements.$window
+            .on('/about', this.toggle);
     }
 
     render = () => {

@@ -2,9 +2,22 @@
 
 @include normalize;
 
-.main {
-  margin: 20px auto 0;
-  width: 75%;
+html,
+body {
+  height:100%;
+}
+
+.content {
+  min-height: 100%;
+  position: relative;
+  /* header padding */
+  padding-top: 175px;
   /* footer padding */
-  padding-bottom: 75px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+}
+
+.main {
+  margin: 0 auto 0;
+  width: 75%;
 }

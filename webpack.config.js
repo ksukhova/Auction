@@ -11,6 +11,9 @@ module.exports = {
         filename: '[name].js',
         path: path.resolve(__dirname, 'build')
     },
+    externals: {
+        jquery: 'jQuery'
+    },
     module: {
         rules: [
             {
@@ -41,6 +44,14 @@ module.exports = {
                 }]
             },
             {
+                test: /\.css$/,
+                use: [{
+                    loader: "style-loader" // creates style nodes from JS strings
+                }, {
+                    loader: "css-loader" // translates CSS into CommonJS
+                }]
+            },
+            {
                 test: /\.woff2?$|\.ttf$|\.eot$|\.svg$|\.gif$/,
                 use: [{
                     loader: "file-loader"
@@ -60,6 +71,7 @@ module.exports = {
         }),
         new CopyWebpackPlugin([
             { context: 'src/images', from: '**/*', to: 'images' },
+            { context: 'src/__mocks__', from: '**/*', to: '__mocks__' }
         ])
     ],
     devServer: {

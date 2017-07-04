@@ -3,10 +3,15 @@
 
 .slider {
   max-width: 900px;
+  min-height: 375px;
   margin: 0 auto;
   height: auto;
 
   .slick-arrow:before {
     color: #000;
+  }
+
+  .slick-list {
+    min-height: 375px;
   }
 }

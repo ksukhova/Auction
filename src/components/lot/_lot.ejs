@@ -1,0 +1,10 @@
+<div class="lot">
+    <% if (lot) { %>
+    <div class="lot__wrapper">
+        <img src="/images/lots/<%= lot.img %>.jpg">
+        <div><%= lot.name %></div>
+        <div><%= lot.description %></div>
+        <div><%= lot.price.toLocaleString() %>$</div>
+    </div>
+    <%}%>
+</div>
