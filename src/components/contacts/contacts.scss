@@ -1,74 +1,72 @@
-@media (min-width: 1024px) {
-  .contacts {
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
+.contacts {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-    &__input {
-      display: block;
-      font-size: 15px;
+  &__input {
+    display: block;
+    font-size: 15px;
 
-      & + & {
-        margin-top: 5px;
-      }
+    & + & {
+      margin-top: 5px;
     }
+  }
 
 
-    &__info {
-      font-size: 18px;
-      margin-top: 30px;
-      line-height: 80%;
-    }
+  &__info {
+    font-size: 18px;
+    margin-top: 30px;
 
-    &__map {
-      margin-top: 30px;
-      width: 800px;
-      height: 550px;
-    }
-
-    &__info:first-child {
+    &:first-child {
       font-weight: bold;
       font-size: 20px;
     }
+  }
 
-    &__num {
-      flex-direction: column;
-      display: flex;
-      line-height: 30px;
-      margin-top: 30px;
-    }
+  &__map {
+    margin-top: 30px;
+    max-width: 800px;
+    width: 100%;
+    height: 100%;
+    max-height: 550px;
+  }
 
-    &__phone, &__fax {
-      text-decoration: none;
-      color: black;
-    }
+  &__num {
+    flex-direction: column;
+    display: flex;
+    line-height: 30px;
+    margin-top: 30px;
+  }
 
-    &__form__item {
-      font-size: 25px;
-      font-weight: bold;
-      margin: 40px 0 20px 0;
-    }
+  &__phone, &__fax {
+    text-decoration: none;
+    color: black;
+  }
 
-    &__btn {
-      width: 100px;
-      background-color: white;
-      color: black;
-      border: 1px solid black;
-      font-size: 15px;
-      border-radius: 6px;
-      display: flex;
-      margin-top: 30px;
+  &__form__item {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 40px 0 20px 0;
+  }
+
+  &__btn {
+    width: 100px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    font-size: 15px;
+    border-radius: 6px;
+    display: flex;
+    margin-top: 30px;
+    text-align: center;
+
+    a {
       text-align: center;
-
-      a {
-        text-align: center;
-      }
     }
+  }
 
-    h2 {
-      margin: 30px 0 20px 0;
-    }
-
+  h2 {
+   margin: 30px 0 20px 0;
   }
 }
