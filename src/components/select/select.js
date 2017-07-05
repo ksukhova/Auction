@@ -52,6 +52,11 @@ export default class Select extends Base {
     };
 
     handleSort = (e) => {
+        const linkUrl = new URL(window.location.href).searchParams.get('type');
+        // to have possibility to sort right after targeting access through header menu
+        if (linkUrl && !this.currentFilter) {
+            this.currentFilter = `type=${linkUrl}`;
+        }
         const filter = this.currentFilter ? `${this.currentFilter}` : '';
         if (e.target.value) {
             this.currentSort = `sort=${e.target.value}`;
