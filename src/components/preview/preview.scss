@@ -52,3 +52,13 @@
     padding: 5px 15px;
   }
 }
+
+@media (max-width: 874px) {
+  .preview {
+    &__link {
+      & + & {
+        margin-left: 0;
+      }
+    }
+  }
+}

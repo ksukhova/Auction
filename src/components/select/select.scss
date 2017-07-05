@@ -1,4 +1,8 @@
 .select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   &__filter, &__sorter {
     width: 20%;
     height: 25px;
