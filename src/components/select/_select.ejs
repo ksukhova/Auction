@@ -5,4 +5,9 @@
         <option <%= type === 'statue' ? "selected" : ""%> value="statue">Statue</option>
         <option <%= type === 'coin' ? "selected" : ""%> value="coin">Coin</option>
     </select>
+    <select class="select__sorter">
+        <option <%= sort === '' ? "selected" : ""%> value="">Default</option>
+        <option <%= sort === 'ascending' ? "selected" : ""%> value="ascending">Ascending</option>
+        <option <%= sort === 'descending' ? "selected" : ""%> value="descending">Descending</option>
+    </select>
 </div>

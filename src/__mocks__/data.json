@@ -91,7 +91,7 @@
     "id": 11,
     "name": "Gunston Hall",
     "description": "FCPOA USS Gunston Hall (LSD-44)",
-    "price": "10",
+    "price": 10,
     "type": "coin",
     "img": "lot11"
   }

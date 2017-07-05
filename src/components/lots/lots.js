@@ -27,6 +27,7 @@ export default class Lots extends Base {
         this.query = null;
         this.page = 0;
         this.type = new URL(window.location.href).searchParams.get('type');
+        this.sort = new URL(window.location.href).searchParams.get('sort');
         this.hasPagination = false;
 
         this.attachEvents();
@@ -84,11 +85,24 @@ export default class Lots extends Base {
         return lots.filter(lot => lot.type === type);
     }
 
+    getByPrice(lots, sort) {
+        if (!sort) {
+            return lots;
+        }
+        return sort === 'ascending'
+            // added concat to receive new array and avoid mutating
+            ? lots.concat().sort((a, b) => a.price - b.price)
+            : lots.concat().sort((a, b) => b.price - a.price);
+    }
+
     render = () => {
         const type = new URL(window.location.href).searchParams.get('type');
-        const lots = this.getByType(this.lots, type);
+        const sort = new URL(window.location.href).searchParams.get('sort');
 
-        if (type !== this.type) {
+        const typedLots = this.getByType(this.lots, type);
+        const lots = this.getByPrice(typedLots, sort);
+
+        if (type !== this.type || sort !== this.sort) {
             this.page = 1;
         }
 
@@ -110,6 +124,10 @@ export default class Lots extends Base {
 
             if (type !== this.type) {
                 this.type = type;
+
+                this.elements.$pagination.pagination('selectPage', this.page);
+            } else if (sort !== this.sort) {
+                this.sort = sort;
 
                 this.elements.$pagination.pagination('selectPage', this.page);
             }

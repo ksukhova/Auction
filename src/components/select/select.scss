@@ -1,6 +1,10 @@
 .select {
-  &__filter {
-    width: 10%;
+  &__filter, &__sorter {
+    width: 20%;
     height: 25px;
+  }
+
+  &__sorter {
+    margin-left: 5%;
   }
 }
