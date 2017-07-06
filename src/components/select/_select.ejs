@@ -1,13 +1,19 @@
 <div class="select">
-    <select class="select__filter">
-        <option <%= type === '' ? "selected" : ""%> value="">All</option>
-        <option <%= type === 'picture' ? "selected" : ""%> value="picture">Picture</option>
-        <option <%= type === 'statue' ? "selected" : ""%> value="statue">Statue</option>
-        <option <%= type === 'coin' ? "selected" : ""%> value="coin">Coin</option>
-    </select>
-    <select class="select__sorter">
-        <option <%= sort === '' ? "selected" : ""%> value="">Default</option>
-        <option <%= sort === 'ascending' ? "selected" : ""%> value="ascending">Ascending</option>
-        <option <%= sort === 'descending' ? "selected" : ""%> value="descending">Descending</option>
-    </select>
+    <div class="select__wrapper">
+        <label for="select__filter">Choose Type:</label>
+        <select id="select__filter" class="select__filter">
+            <option <%= type === '' ? "selected" : ""%> value="">All</option>
+            <option <%= type === 'picture' ? "selected" : ""%> value="picture">Picture</option>
+            <option <%= type === 'statue' ? "selected" : ""%> value="statue">Statue</option>
+            <option <%= type === 'coin' ? "selected" : ""%> value="coin">Coin</option>
+        </select>
+    </div>
+    <div class="select__wrapper">
+        <label for="select__sorter">Choose Price:</label>
+        <select id="select__sorter" class="select__sorter">
+            <option <%= sort === '' ? "selected" : ""%> value="">Default</option>
+            <option <%= sort === 'ascending' ? "selected" : ""%> value="ascending">Lowest first</option>
+            <option <%= sort === 'descending' ? "selected" : ""%> value="descending">Highest first</option>
+        </select>
+    </div>
 </div>

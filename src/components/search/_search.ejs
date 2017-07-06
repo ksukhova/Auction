@@ -1,0 +1,17 @@
+<div class="search">
+    <div class="search__content">
+        <% if (items.length) { %>
+            <h2>Search results:</h2>
+            <% for (var i = 0; i < items.length; i++) { %>
+                <button class="preview__link" data-link="/lots/<%= items[i].id %>">
+                    <div class="preview__item">
+                        <img class="preview__img" src="/images/lots/<%= items[i].img %>.jpg">
+                        <%= items[i].name %>
+                    </div>
+                </button>
+            <%}
+        } else { %>
+            <h2>No results!</h2>
+        <%}%>
+    </div>
+</div>

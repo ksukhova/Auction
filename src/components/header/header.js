@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import { router } from 'src/router';
 import './header.scss';
 
 export default class Header {
@@ -14,19 +15,17 @@ export default class Header {
             $window: $(window)
         };
 
-        this.data = null;
-        this.init();
-    }
-
-    init() {
-
+        this.attachEvents();
     }
 
     attachEvents() {
-        this.elements.$root.on('click', Header.selectors.button, this.handleClick.bind(this))
+        this.elements.$root.on('click', Header.selectors.button, this.handleClick)
     }
 
-    handleClick() {
-
+    handleClick = () => {
+        const search =  $(Header.selectors.search).val();
+        if (search) {
+            router.navigate(`/search?query=${search}`);
+        }
     }
 }
