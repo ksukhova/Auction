@@ -61,12 +61,10 @@
   }
 }
 
-@media (max-width: 874px) {
+@media (max-width: 500px) {
   .preview {
     &__link {
-      & + & {
-        margin-left: 0;
-      }
+      margin-right: 0;
     }
   }
 }
