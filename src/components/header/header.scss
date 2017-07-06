@@ -115,6 +115,11 @@
   .header {
     background-color: #000;
 
+    &__nav {
+      width: auto;
+      margin: 0;
+    }
+
     &__enter,
     &__search,
     &__logo {
@@ -124,6 +129,7 @@
     &__logo {
       &_small {
         display: block;
+        margin-right: 10px;
         img {
           max-width: 50px;
           max-height: 50px;
