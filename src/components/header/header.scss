@@ -52,7 +52,6 @@
     }
 
     &-button {
-      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -74,8 +73,7 @@
 
       &:hover &-dropdown {
         display: block;
-        top: 40px;
-        left: -17px;
+        top: 96px;
       }
     }
   }
