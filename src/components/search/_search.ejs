@@ -2,6 +2,7 @@
     <div class="search__content">
         <% if (items.length) { %>
             <h2>Search results:</h2>
+            <div class="search__wrapper">
             <% for (var i = 0; i < items.length; i++) { %>
                 <button class="preview__link" data-link="/lots/<%= items[i].id %>">
                     <div class="preview__item">
@@ -9,8 +10,9 @@
                         <%= items[i].name %>
                     </div>
                 </button>
-            <%}
-        } else { %>
+            <%}%>
+            </div>
+        <%} else { %>
             <h2>No results!</h2>
         <%}%>
     </div>

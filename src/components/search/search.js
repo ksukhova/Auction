@@ -2,7 +2,6 @@ import $ from 'jquery';
 import Base from 'src/components/base';
 import { router } from 'src/router';
 import template from './_search.ejs';
-import './search.scss';
 
 export default class Search extends Base {
     static selectors = {
