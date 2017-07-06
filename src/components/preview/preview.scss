@@ -33,6 +33,15 @@
     pointer-events: none;
   }
 
+  &__name,
+  &__price{
+    margin-top: 5px;
+  }
+
+  &__price {
+    text-decoration: underline;
+  }
+
   &__show-all {
     margin-top: 20px;
     text-transform: uppercase;

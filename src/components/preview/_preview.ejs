@@ -5,7 +5,8 @@
                 <button class="preview__link" data-link="/lots/<%= data[i].id %>">
                     <div class="preview__item">
                         <img class="preview__img" src="/images/lots/<%= data[i].img %>.jpg">
-                        <%= data[i].name %>
+                        <div class="preview__name"><%= data[i].name %></div>
+                        <div class="preview__price"><%= data[i].price.toLocaleString() %>$</div>
                         <p class="preview__more">Learn more</p>
                     </div>
                 </button>
