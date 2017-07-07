@@ -42,7 +42,6 @@
   "dependencies": {
     "jquery": "^3.2.1",
     "normalize-scss": "^7.0.0",
-    "query-string": "^4.3.4",
     "simple-pagination.js": "^1.6.0",
     "slick-carousel": "^1.6.0"
   }

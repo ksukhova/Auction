@@ -1,5 +1,4 @@
 import $ from 'jquery';
-// import router from 'src/router';
 import Base from 'src/components/base';
 import template from './_lot.ejs';
 import './lot.scss';

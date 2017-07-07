@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import 'slick-carousel';
 import './slider.scss';
-import router from 'src/router';
 import Base from 'src/components/base';
 import template from './_slider.ejs';
 

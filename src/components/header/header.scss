@@ -47,7 +47,7 @@
       text-decoration-line: underline;
 
       &:hover {
-        color: gray;
+        color: #808080;
       }
     }
 
@@ -82,7 +82,7 @@
     margin-right: 25px;
     display: inline-block;
     font-size: 11px;
-    color: white;
+    color: #fff;
     text-shadow: 0 -1px rgb(46,53,58);
     text-decoration: none;
     user-select: none;
@@ -99,7 +99,7 @@
             0 0 1px rgb(86,96,106);
 
     &:hover {
-      color: gray;
+      color: #808080;
       cursor: pointer;
     }
   }

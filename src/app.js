@@ -9,7 +9,7 @@ import Lot from './components/lot/lot.js';
 import Select from './components/select/select.js';
 import Search from './components/search/search.js';
 import start from './start';
-import { registerRoute, router } from './router';
+import { registerRoute } from './router';
 import './app.scss';
 
 const components = {
