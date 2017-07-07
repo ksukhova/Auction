@@ -7,7 +7,8 @@
                 <button class="preview__link" data-link="/lots/<%= items[i].id %>">
                     <div class="preview__item">
                         <img class="preview__img" src="/images/lots/<%= items[i].img %>.jpg">
-                        <%= items[i].name %>
+                        <div class="preview__name"><%= items[i].name %></div>
+                        <p class="preview__more">Learn more</p>
                     </div>
                 </button>
             <%}%>

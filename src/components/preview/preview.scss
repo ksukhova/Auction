@@ -7,8 +7,9 @@
   &__wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
+    width: 100%;
   }
 
   &__link {
@@ -18,7 +19,6 @@
     cursor: pointer;
     flex-basis: 30%;
     margin-top: 15px;
-    margin-right: 15px;
   }
 
   &__item {
@@ -29,7 +29,10 @@
   }
 
   &__img,
-  &__item {
+  &__item,
+  &__name,
+  &__price,
+  &__more {
     pointer-events: none;
   }
 
