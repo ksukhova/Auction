@@ -40,14 +40,6 @@ export default class Slider extends Base {
             .on('/', this.toggle);
     }
 
-    toggle = (event, { active }) => {
-        if (active) {
-            this.render();
-        } else {
-            this.destroy();
-        }
-    };
-
     render = () => {
         this.elements.$root.html(template());
         this.elements.$slider = this.elements.$root.find(Slider.selectors.slider);
