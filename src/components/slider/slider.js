@@ -18,7 +18,6 @@ export default class Slider extends Base {
             $slider: $('')
         };
 
-        this.init();
         this.attachEvents();
     }
 
