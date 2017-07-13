@@ -14,15 +14,14 @@ export default class Slider extends Base {
 
         this.elements = {
             $root,
-            $window: $(window),
-            $slider: $('')
+            $window: $(window)
         };
 
         this.attachEvents();
     }
 
     init() {
-        this.elements.$slider.slick({
+        this.elements.$root.find(Slider.selectors.slider).slick({
             dots: true,
             arrows: true,
             slidesToShow: 1,
@@ -41,7 +40,6 @@ export default class Slider extends Base {
 
     render = () => {
         this.elements.$root.html(template());
-        this.elements.$slider = this.elements.$root.find(Slider.selectors.slider);
 
         this.init();
     };
